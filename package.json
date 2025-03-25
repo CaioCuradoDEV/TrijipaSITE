@@ -1,0 +1,27 @@
+{
+  "name": "trijipasite",
+  "version": "1.0.0",
+  "description": "Primeiro Projeto de site para o TRIjipa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaioCuradoDEV/TrijipaSITE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaioCuradoDEV/TrijipaSITE/issues"
+  },
+  "homepage": "https://github.com/CaioCuradoDEV/TrijipaSITE#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.14.0"
+  }
+}
