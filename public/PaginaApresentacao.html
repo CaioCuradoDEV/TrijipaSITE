@@ -13,7 +13,7 @@
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="logo">
-        <img src="midia/teste01.jpg" alt="Logo Trijipa">
+        <img src="midia/Trijipalogongb.png" alt="Logo Trijipa">
       </div>
 
       <nav class="menu">
@@ -55,12 +55,15 @@
 
       <!-- Apresentação do Criador -->
       <section class="criador">
-        <h2>O Criador</h2>
+        <h2>O Idealizador</h2>
         <div class="criador-conteudo">
           <img src="midia/asaffe.png" alt="Hugo Leonardo Curado">
+      
           <div>
             <h3>Hugo Leonardo Curado</h3>
-            <p>[Texto sobre quem é o Hugo, visão, propósito]</p>
+            <p>
+              [Texto sobre quem é o Hugo, visão, propósito] Texto sobre quem é o Hugo, visão, propósito. Texto sobre quem é o Hugo, visão, propósito. Texto sobre quem é o Hugo, visão, propósito. Texto sobre quem é o Hugo, visão, propósito. Texto sobre quem é o Hugo, visão, propósito.
+            </p>
           </div>
         </div>
       </section>
@@ -69,16 +72,14 @@
       <section class="galeria">
         <h2>Galeria</h2>
         <div class="grid-galeria">
-          <img src="midia/asaffe.png" alt="Foto 1">
-          <img src="midia/asaffe.png" alt="Foto 2">
-          <img src="midia/asaffe.png" alt="Foto 3">
+          <img src="midia/asaffe.png" alt="Foto 1" class="galeria-img">
+          <img src="midia/asaffe.png" alt="Foto 2" class="galeria-img">
+          <img src="midia/asaffe.png" alt="Foto 3" class="galeria-img">
           <div class="video-box">
-            <iframe 
-              src="https://www.youtube.com/watch?v=mghADctw3Sg" 
-              title="Vídeo do Evento" 
-              frameborder="0" 
-              allowfullscreen>
-            </iframe>
+            <video controls>
+              <source src="midia/video1.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
           </div>
         </div>
       </section>
@@ -91,7 +92,10 @@
     </footer>
 
   </div>
-
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

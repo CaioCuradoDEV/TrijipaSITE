@@ -23,4 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+const imagens = document.querySelectorAll('.galeria-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox .close');
+
+imagens.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== lightboxImg && e.target !== closeBtn) {
+    lightbox.style.display = 'none';
+  }
+});
   
