@@ -1,6 +1,9 @@
 # TrijipaSITE
 Primeiro Projeto de site para o TRIjipa
 
+site ainda sem nescessidade de utilização de rotas e BD.
+
+so html css e JS
 Código para a criação do BD como as imagens
         
         CREATE TABLE imagens (
