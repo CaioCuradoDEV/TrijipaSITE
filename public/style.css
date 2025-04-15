@@ -1,0 +1,247 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* ===== Reset e Corpo ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000000; /* preto de fundo geral */
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ===== Container Base ===== */
+.container {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  background-color: #181616;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #fbff00, #001f3f);
+  padding: 10px 30px;
+}
+
+.logo img {
+  height: 50px;
+  border-radius: 8px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.menu a:hover {
+  color: #2eca1f;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  padding: 10px 0;
+  min-width: 150px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu li {
+  padding: 8px 20px;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #e60000;
+  border-radius: 4px;
+}
+
+.dropdown:hover .submenu,
+.dropdown.open .submenu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Setas animadas */
+.arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow,
+.dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Ícones lado direito da navbar */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.icons i {
+  font-size: 18px;
+}
+
+/* ===== FOTO TOPO ===== */
+.topo {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid #333;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('midia/duathlon.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  height: 700px;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.conteudo {
+  padding: 30px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Seções estilizadas */
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #336b4d;
+  margin-bottom: 15px;
+}
+
+/* ===== Criador do evento ===== */
+.criador-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.criador-conteudo img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+/* ===== Galeria ===== */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  background-color: #d9f2e3;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #2f4f4f;
+  border-top: 2px solid #cce5dc;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .criador-conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .criador-conteudo img {
+    width: 80%;
+  }
+}
+.video-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* proporção 16:9 */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
