@@ -5,6 +5,25 @@
   <title>TRIJIPA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --cor-primaria: #17830d;
+      --cor-secundaria: #2eca1f;
+      --cor-fundo: #ffffff;
+      --cor-texto: #333333;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -41,7 +60,9 @@
 
     <!-- FOTO TOPO -->
     <div class="topo">
-      <div class="foto"></div>
+      <div class="foto lightbox-trigger">
+
+      </div>
     </div>
 
     <!-- CONTEÚDO PRINCIPAL -->
@@ -50,14 +71,21 @@
       <!-- Apresentação da marca -->
       <section class="sobre-trijipa">
         <h2>Sobre a TRIJIPA</h2>
-        <p>[Aqui entra o texto apresentando a marca]</p>
+        <div class="sobre-conteudo">
+          <div class="sobre-texto">
+            <p>[Aqui entra o texto apresentando a marca]</p>
+          </div>
+          <div class="sobre-logo">
+            <img src="midia/Trijipalogongb.png" alt="Logo Trijipa" class="lightbox-trigger">
+          </div>
+        </div>
       </section>
 
       <!-- Apresentação do Criador -->
       <section class="criador">
         <h2>O Idealizador</h2>
         <div class="criador-conteudo">
-          <img src="midia/asaffe.png" alt="Hugo Leonardo Curado">
+          <img src="midia/HugoFoto.jpg" alt="Hugo Leonardo Curado" class="lightbox-trigger">
       
           <div>
             <h3>Hugo Leonardo Curado</h3>
@@ -72,14 +100,36 @@
       <section class="galeria">
         <h2>Galeria</h2>
         <div class="grid-galeria">
-          <img src="midia/asaffe.png" alt="Foto 1" class="galeria-img">
-          <img src="midia/asaffe.png" alt="Foto 2" class="galeria-img">
-          <img src="midia/asaffe.png" alt="Foto 3" class="galeria-img">
-          <div class="video-box">
-            <video controls>
-              <source src="midia/video1.mp4" type="video/mp4">
+          <img src="midia/Galeria1.jpg" alt="Foto 1" class="galeria-img lightbox-trigger">
+          <img src="midia/galeria2.jpg" alt="Foto 2" class="galeria-img lightbox-trigger">
+          <img src="midia/galeria3.jpg" alt="Foto 3" class="galeria-img lightbox-trigger">
+          <div class="galeria-img video-box">
+            <video controls class="lightbox-trigger" data-src="midia/LargadaVideo.MOV">
+              <source src="midia/LargadaVideo.MOV" type="video/mp4">
               Seu navegador não suporta vídeo HTML5.
             </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Patrocinadores -->
+      <section class="patrocinadores">
+        <h2>Nossos Patrocinadores</h2>
+        <div class="grid-patrocinadores">
+          <div class="patrocinador-card">
+            <img src="midia/patrocinador1.png" alt="Patrocinador 1" class="lightbox-trigger">
+            <h3>Nome do Patrocinador</h3>
+            <p>Categoria</p>
+          </div>
+          <div class="patrocinador-card">
+            <img src="midia/patrocinador2.png" alt="Patrocinador 2" class="lightbox-trigger">
+            <h3>Nome do Patrocinador</h3>
+            <p>Categoria</p>
+          </div>
+          <div class="patrocinador-card">
+            <img src="midia/patrocinador3.png" alt="Patrocinador 3" class="lightbox-trigger">
+            <h3>Nome do Patrocinador</h3>
+            <p>Categoria</p>
           </div>
         </div>
       </section>
@@ -95,6 +145,12 @@
   <div class="lightbox" id="lightbox">
     <span class="close">&times;</span>
     <img class="lightbox-img" id="lightbox-img">
+    <div class="lightbox-video-container">
+      <video class="lightbox-video" id="lightbox-video" controls>
+        <source src="" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

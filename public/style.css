@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000000; /* preto de fundo geral */
+  background-color: #090c3d; /* preto de fundo geral */
   color: #000000;
   line-height: 1.6;
 }
@@ -19,7 +19,7 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   min-height: 100vh;
-  background-color: #181616;
+  background-color: #060731;
 }
 
 /* ===== NAVBAR ===== */
@@ -140,7 +140,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('midia/duathlon.jpg');
+  background-image: url('midia/principalfoto.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -152,7 +152,7 @@ body {
 /* ===== CONTEÚDO PRINCIPAL ===== */
 .conteudo {
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #858484;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -169,6 +169,59 @@ section {
 section h2 {
   color: #336b4d;
   margin-bottom: 15px;
+}
+
+/* ===== Sobre a TRIJIPA ===== */
+.sobre-trijipa {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sobre-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sobre-texto {
+  padding-right: 20px;
+}
+
+.sobre-texto p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.sobre-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .sobre-texto {
+    padding-right: 0;
+  }
+  
+  .sobre-logo img {
+    max-height: 200px;
+  }
 }
 
 /* ===== Criador do evento ===== */
@@ -189,25 +242,119 @@ section h2 {
 /* ===== Galeria ===== */
 .grid-galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: stretch;
 }
 
-.grid-galeria img {
+.galeria-img {
   width: 100%;
-  height: 500px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
-}
-.grid-galeria video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+  cursor: pointer;
 }
 
-.grid-galeria img:hover {
+.video-box {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria-img:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .grid-galeria {
+    grid-template-columns: 1fr;
+  }
+  
+  .galeria-img {
+    height: 250px;
+  }
+}
+
+/* ===== Seção de Patrocinadores ===== */
+.patrocinadores {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.patrocinadores h2 {
+  color: #17830d;
+  margin-bottom: 40px;
+  font-size: 2.2em;
+  position: relative;
+}
+
+.patrocinadores h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #17830d, #2eca1f);
+}
+
+.grid-patrocinadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.patrocinador-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.patrocinador-card:hover {
+  transform: translateY(-10px);
+}
+
+.patrocinador-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.patrocinador-card h3 {
+  color: #333;
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.patrocinador-card p {
+  color: #666;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .grid-patrocinadores {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .patrocinador-card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 /* ===== Rodapé ===== */
@@ -282,23 +429,6 @@ section h2 {
       margin: 0 auto;
     }
   }
-  }
-.video-box {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.video-box iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 .lightbox {
@@ -314,10 +444,36 @@ section h2 {
   align-items: center;
 }
 
-.lightbox img {
+.lightbox-img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-video-container {
+  display: none;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lightbox-video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  background-color: #000;
+}
+
+.lightbox-video::-webkit-media-controls {
+  pointer-events: auto;
+}
+
+.lightbox-video::-webkit-media-controls-enclosure {
+  pointer-events: auto;
+}
+
+.lightbox-video::-webkit-media-controls-panel {
+  pointer-events: auto;
 }
 
 .lightbox .close {
@@ -328,4 +484,51 @@ section h2 {
   color: white;
   cursor: pointer;
   z-index: 2100;
+}
+
+/* ===== Sobre o Duathlon ===== */
+.sobre-duathlon {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 20px 0;
+}
+
+.duathlon-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.duathlon-conteudo p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.duathlon-link {
+  color: #17830d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(23, 131, 13, 0.1);
+}
+
+.duathlon-link:hover {
+  color: #2eca1f;
+  background-color: rgba(46, 202, 31, 0.2);
+}
+
+@media (max-width: 768px) {
+  .sobre-duathlon {
+    padding: 20px;
+  }
+  
+  .duathlon-conteudo p {
+    font-size: 1em;
+  }
 }
