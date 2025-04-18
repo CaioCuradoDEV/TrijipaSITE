@@ -83,7 +83,7 @@ body {
 }
 
 .submenu li a {
-  color: white;
+  color: rgb(255, 248, 248);
   text-decoration: none;
   display: block;
 }
@@ -148,6 +148,7 @@ body {
   font-weight: bold;
   height: 700px;
 }
+
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 .conteudo {
@@ -532,3 +533,14 @@ section h2 {
     font-size: 1em;
   }
 }
+
+.duathlon-foto {
+  background-image: url('midia/DuathlonPrifoto.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  height: 700px;
+}
+
