@@ -288,10 +288,11 @@ section h2 {
   background-color: #f8f9fa;
   padding: 50px 20px;
   text-align: center;
+  
 }
 
 .patrocinadores h2 {
-  color: #17830d;
+  color: #000000;
   margin-bottom: 40px;
   font-size: 2.2em;
   position: relative;
@@ -317,7 +318,7 @@ section h2 {
 }
 
 .patrocinador-card {
-  background: white;
+  background: #d2cf17;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -336,7 +337,7 @@ section h2 {
 }
 
 .patrocinador-card h3 {
-  color: #333;
+  color: #0800ff;
   margin: 10px 0;
   font-size: 1.2em;
 }
@@ -535,7 +536,7 @@ section h2 {
 }
 
 .duathlon-foto {
-  background-image: url('midia/DuathlonPrifoto.png');
+  background-image: url('midia/duathlon/DuathlonPrifoto.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -544,3 +545,6 @@ section h2 {
   height: 700px;
 }
 
+li {
+  list-style: none;
+}
