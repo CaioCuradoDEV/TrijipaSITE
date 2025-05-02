@@ -183,7 +183,7 @@ section h2 {
 .sobre-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 4px;
   align-items: center;
 }
 
