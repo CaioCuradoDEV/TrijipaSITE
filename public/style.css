@@ -32,9 +32,12 @@ body {
 }
 
 .logo img {
-  height: 100px;
-  width:  100px;
+  height: 110px;
+  width:  90px;
   border-radius: 8px;
+  overflow: visible; /* Garante que o zoom apareça fora do box */
+  transform: (1.4g);
+  transform-origin: center;
 }
 
 .menu ul {
@@ -201,6 +204,7 @@ section h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: visible; /* Garante que o zoom apareça fora do box */
 }
 
 .sobre-logo img {
@@ -208,6 +212,8 @@ section h2 {
   height: auto;
   max-height: 250px;
   object-fit: contain;
+  transform: scale(1.5); /* Aumenta a imagem */
+  transform-origin: center;
 }
 
 @media (max-width: 768px) {
