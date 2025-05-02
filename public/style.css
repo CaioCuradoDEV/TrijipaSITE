@@ -548,3 +548,21 @@ section h2 {
 li {
   list-style: none;
 }
+
+.btn-inscricao {
+  background-color: #0088cc; /* Azul vibrante */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inscricao:hover {
+  background-color: #006699;
+  transform: translateY(-2px);
+}
