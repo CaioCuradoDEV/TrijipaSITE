@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightboxVideoContainer = document.querySelector('.lightbox-video-container');
     const closeBtn = document.querySelector('.lightbox .close');
     const triggers = document.querySelectorAll('.lightbox-trigger');
+    const videoButtons = document.querySelectorAll('.btn-video-percurso');
 
     function closeLightbox() {
         lightbox.style.display = 'none';
@@ -36,6 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxVideo.pause();
         lightboxVideo.currentTime = 0;
     }
+
+    // Função para abrir vídeo do percurso
+    videoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const videoSrc = button.getAttribute('data-video');
+            lightbox.style.display = 'flex';
+            lightboxImg.style.display = 'none';
+            lightboxVideoContainer.style.display = 'block';
+            lightboxVideo.src = videoSrc;
+            lightboxVideo.load();
+            lightboxVideo.play();
+        });
+    });
 
     triggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
